@@ -3,23 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Calculadora % Grasa Corporal</title>
 </head>
 <body>
-    <h1>Hola Mundo</h1>
-    <form action="">
-        <label>Peso</label>
-        <input type="text">
-        <label>Altura</label>
-        <input type="text">
-        <label>Cm cintura</label>
-        <input type="text">
-        <label>Edad</label>
-        <input type="text">
-        <label>Cm cadera</label>
-        <input type="text">
-        <input type="submit">
-    </form>
+   <div class="container">
+    <div class = "formulario">
+        
+   
+   
+        <form>
+            <label>Sexo</label>
+            <select name="sexo" id="">
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+            </select><br><br>
+            <label>Peso</label>
+            <select name="peso" id="peso">
+                    
+            </select><br><br>
+           
+            <label>Altura</label>
+            <select name="altura" id="altura">
+                
+            </select><br><br>
+            <label>Cm cintura</label>
+            <select name="cintura" id="cintura">
+                
+            </select><br><br>
+            <label>Cm cuello</label>
+            <select name="cuello" id="cuello">
+                
+            </select><br><br>
+            <label>Edad</label>
+            <select name="edad" id="edad">
+                
+            </select><br><br>
+            
+            
+        </form>
+
+        <button id="calcular">Calcular</button>
+    </div>
+   </div> 
+  
     <script src = "js/app.js"></script>
 </body>
 </html>
+
+

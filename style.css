@@ -1,0 +1,16 @@
+* {
+
+}
+body {
+
+}
+.formulario {
+ background-color: greenyellow;
+ width: 200px;
+ height: 300px;
+}
+.container {
+   display: flex;
+   justify-content: center;
+   margin-top: 15%;
+}

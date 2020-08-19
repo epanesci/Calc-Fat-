@@ -13,34 +13,52 @@
    
    
         <form>
-            <label>Sexo</label>
-            <select name="sexo" id="">
-                <option value="hombre">Hombre</option>
-                <option value="mujer">Mujer</option>
-            </select><br><br>
-            <label>Peso</label>
-            <select name="peso" id="peso">
+          <ul>
+              <li>
+                  <label>Sexo</label>
+                <select name="sexo" id="sexo">
+                    <option value="hombre">Hombre</option>
+                    <option selected = "true" value="mujer">Mujer</option>
+                </select>
+            </li>
+            <li>
+                <label>Peso</label>
+                <select name="peso" id="peso">
                     
-            </select><br><br>
-           
-            <label>Altura</label>
-            <select name="altura" id="altura">
-                
-            </select><br><br>
-            <label>Cm cintura</label>
-            <select name="cintura" id="cintura">
-                
-            </select><br><br>
-            <label>Cm cuello</label>
+                </select>
+            </li>
+            <li>
+                <label>Altura</label>
+                <select name="altura" id="altura">
+                    
+                </select>
+            </li>
+            <li>
+                <label>Cm cintura</label>
+                <select name="cintura" id="cintura">
+    
+                </select>
+            </li>
+            <li class="caderaBox">
+                <label>Cm Cadera</label>
+                <select name="cadera" id="cadera">
+                    
+                </select>
+            </li>
+            <li>
+                <label>Cm cuello</label>
             <select name="cuello" id="cuello">
                 
-            </select><br><br>
-            <label>Edad</label>
+            </select>
+            </li>
+            <li>
+                <label>Edad</label>
             <select name="edad" id="edad">
                 
-            </select><br><br>
-            
-            
+            </select>
+            </li>
+          </ul>
+
         </form>
 
         <button id="calcular">Calcular</button>

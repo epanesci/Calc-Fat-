@@ -1,24 +1,25 @@
-* {
 
-}
 body {
-
-}
-ul {
-   list-style: none;
-}
-li  {
-    margin-bottom: 10px;
-}
-.formulario {
- background-color: greenyellow;
- width: 200px;
- height: 300px;
- text-align: center;
- padding-top: 30px;
+  background-image: url("img/fondo.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
 }
 .container {
-   display: flex;
-   justify-content: center;
-   margin-top: 15%;
+  height: 100vh;
+}
+.app {
+ 
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  border-radius: 40px;
+}
+
+
+.custom-control-label::before{
+  background-color:#F78EC4;
+}
+.custom-control-label::after{
+  background-color:white !important;
 }

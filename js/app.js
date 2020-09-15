@@ -1,65 +1,67 @@
 
-const cargaInicial = () => {
-    let listadoDePesos = '';
-    for (i = 30; i<200 ; i++){
-        listadoDePesos += (i === 90) ? `<option selected = "true" value="${i}">${i}</option>` : `<option value="${i}">${i}</option>`;
+const cargarOpciones = (sexo) => {
+    const datesComplete = (init, end, initial) => {
+        let listado = '';
+        for (i = init; i < end; i++) {
+            listado += (i === initial) ? `<option selected = "true" value="${i}">${i}</option>` : `<option value="${i}">${i}</option>`;
+        }
+        return listado;
     }
-    let listadoDeAlturas = '';
-    for (i = 140; i<240 ; i++){
-    listadoDeAlturas += (i===190) ? `<option  selected = "true" value="${i}">${i}</option>`:`<option value="${i}">${i}</option>`;
-    }
-    let listadoDeCinturas = '';
-    for (i = 50; i<200 ; i++){
-    listadoDeCinturas += (i===90) ?  `<option selected = "true" value="${i}">${i}</option>` : `<option value="${i}">${i}</option>`;
-    }
-    let listadoDeCaderas = '';
-    for (i = 50; i<200 ; i++){
-    listadoDeCaderas += (i===90) ?  `<option selected = "true" value="${i}">${i}</option>` : `<option value="${i}">${i}</option>`;
-    }
-    let listadoDeCuellos = '';
-    for (i = 25; i<60 ; i++){
-    listadoDeCuellos += (i===45) ? `<option selected = "true" value="${i}">${i}</option>`: `<option value="${i}">${i}</option>`;
-    }
-    let listadoDeEdades = '';
-    for (i = 18; i<90 ; i++){
-    listadoDeEdades += (i===45) ? `<option selected = "true" value="${i}">${i}</option>`: `<option value="${i}">${i}</option>`;
-    }
-    document.getElementById('peso').innerHTML = listadoDePesos;
-    document.getElementById('altura').innerHTML = listadoDeAlturas;
-    document.getElementById('cintura').innerHTML = listadoDeCinturas;
-    document.getElementById('cadera').innerHTML = listadoDeCaderas;
-    document.getElementById('cuello').innerHTML = listadoDeCuellos;
-    document.getElementById('edad').innerHTML = listadoDeEdades;
+    let init = 0;
+    let end = 300;
+    let initial = 0;
+    opciones.forEach(element => {
+        switch (element) {
+            case 'peso': initial = 70; break;
+            case 'altura': initial = 170; break;
+            case 'cintura': initial = 70; break;
+            case 'cadera': initial = 100; break;
+            case 'cuello': initial = 35; break;
+            case 'edad': initial = 35; break;
+        }
+        if (sexo === 'men' && element != 'cuello' && element != 'edad') {
+            initial += 20;
+        }
+        document.getElementById(element).innerHTML = datesComplete(init, end, initial);
+    });
+
 }
 
-
-cargaInicial();
-let peso = document.getElementById('peso').value;
-let altura = document.getElementById('altura').value;
-let cintura = document.getElementById('cintura').value;
-let cadera = document.getElementById('cadera').value;
-let cuello = document.getElementById('cuello').value;
 let sexoSelector = document.getElementById('sexo');
-let caderaSelector = document.querySelector('.caderaBox');
-sexo.addEventListener('click', () => {
-  
-    caderaSelector.style.display = (sexoSelector.value === 'hombre') ? 'none' :'block';
-    
+let opciones = ['peso', 'altura', 'cadera', 'cintura', 'cuello', 'edad'];
+
+cargarOpciones('woman');
+
+
+
+sexoSelector.addEventListener('change', () => {
+
+    document.querySelector('.caderaBox').style.display = (sexoSelector.checked) ? 'none' : 'block';
+    let sexo = (sexoSelector.checked) ? 'men' : 'woman';
+    cargarOpciones(sexo);
 });
+
 document.getElementById('calcular').addEventListener('click', () => {
-    
-    
-    let edad = 32; 
-  
-    let porcGrasa = Math.floor((495/(1.0324-0.19077*(Math.log10(cintura-cuello))+0.15456*(Math.log10(altura)))-450)*100)/100;
-    
-    let kgGrasa = peso * porcGrasa /100;
-    let kgMagro = peso - kgGrasa;
+    const calcularGrasa = (info,sexo) => {
+       if (sexo === 'men'){
+           return (Math.floor((495 / (1.0324 - 0.19077 * (Math.log10(info[3] - info[4])) + 0.15456 * (Math.log10(info[1]))) - 450) * 100) / 100);
+       } 
+       else {
+           return (Math.floor((495 / (1.29579 - 0.35004 * (Math.log10(info[3]+info[2] - info[4])) + 0.22100 * (Math.log10(info[1]))) - 450) * 100) / 100);
+       }
+        
+    };
+    let info = [];
+    opciones.forEach(element => {
+         info.push(parseInt(document.getElementById(element).value));
+    });
+    let sexo = (sexoSelector.checked) ? 'men' : 'woman';
+    let porcGrasa = calcularGrasa(info,sexo);
+    let kgGrasa = info[0] * porcGrasa /100;
+    let kgMagro = info[0] - kgGrasa;
     console.log(porcGrasa + '%');
     console.log(kgGrasa + 'KG');
     console.log(kgMagro + 'KG');
     
 });
-
-
 

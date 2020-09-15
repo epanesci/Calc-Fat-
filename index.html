@@ -3,68 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="style.css">
     <title>Calculadora % Grasa Corporal</title>
 </head>
-<body>
-   <div class="container">
-    <div class = "formulario">
+<body >
+   <div class="container d-flex  align-items-center">
+       
+        <div class = "text-center bg-info softborder p-4 app">
+            <form>
+            <ul class="list-unstyled p-0 m-0  ">
+                <li>
+                    <label>Sexo</label>
+                    <div class="custom-control custom-switch d-inline ">
+                        <input type="checkbox" class="custom-control-input" id="sexo">
+                        <label class="custom-control-label " for="sexo"></label>
+                    </div>
+                </li>
+                <li >
+                    <label >Peso</label>
+                    <select name="peso" id="peso">
+                        
+                    </select>
+                </li>
+                <li>
+                    <label>Altura</label>
+                    <select name="altura" id="altura">
+                        
+                    </select>
+                </li>
+                <li>
+                    <label>Cm cintura</label>
+                    <select name="cintura" id="cintura">
         
-   
-   
-        <form>
-          <ul>
-              <li>
-                  <label>Sexo</label>
-                <select name="sexo" id="sexo">
-                    <option value="hombre">Hombre</option>
-                    <option selected = "true" value="mujer">Mujer</option>
-                </select>
-            </li>
-            <li>
-                <label>Peso</label>
-                <select name="peso" id="peso">
+                    </select>
+                </li>
+                <li class="caderaBox">
+                    <label>Cm Cadera</label>
+                    <select name="cadera" id="cadera">
+                        
+                    </select>
+                </li>
+                <li>
+                    <label>Cm cuello</label>
                     
-                </select>
-            </li>
-            <li>
-                <label>Altura</label>
-                <select name="altura" id="altura">
+                    <select name="cuello" id="cuello">
                     
-                </select>
-            </li>
-            <li>
-                <label>Cm cintura</label>
-                <select name="cintura" id="cintura">
-    
-                </select>
-            </li>
-            <li class="caderaBox">
-                <label>Cm Cadera</label>
-                <select name="cadera" id="cadera">
-                    
-                </select>
-            </li>
-            <li>
-                <label>Cm cuello</label>
-            <select name="cuello" id="cuello">
-                
-            </select>
-            </li>
-            <li>
-                <label>Edad</label>
-            <select name="edad" id="edad">
-                
-            </select>
-            </li>
-          </ul>
+                    </select>
+                </li>
+                <li>
+                    <label>Edad</label>
+                    <select name="edad" id="edad">
+                        
+                    </select>
+                </li>
+            </ul>
+            </form>
 
-        </form>
-
-        <button id="calcular">Calcular</button>
-    </div>
+            <button id="calcular">Calcular</button>
+        </div>
    </div> 
-  
+    <script src="js/jquery.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
     <script src = "js/app.js"></script>
 </body>
 </html>

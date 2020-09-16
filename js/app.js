@@ -21,6 +21,7 @@ const cargarOpciones = (sexo) => {
         }
         if (sexo === 'men' && element != 'cuello' && element != 'edad') {
             initial += 20;
+           
         }
         document.getElementById(element).innerHTML = datesComplete(init, end, initial);
     });
@@ -65,3 +66,7 @@ document.getElementById('calcular').addEventListener('click', () => {
     
 });
 
+let range = document.getElementById('cuello');
+range.addEventListener('mousemove',() => {
+    document.getElementById('rangevalue').innerText = range.value; 
+})

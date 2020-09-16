@@ -3,19 +3,25 @@ body {
   background-image: url("img/fondo.jpg") ;
   background-repeat: no-repeat;
   background-size: cover;
- 
+}
+li {
+  height: 40px;
 }
 .container {
   height: 100vh;
 }
-.app {
- 
+.custom-select{
   width: max-content;
+}
+.app {
+  width: 200px;
   height: max-content;
   margin: auto;
   border-radius: 40px;
 }
-
+#rangevalue {
+  width: 14%;
+}
 
 .custom-control-label::before{
   background-color:#F78EC4;

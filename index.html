@@ -8,17 +8,19 @@
     <title>Calculadora % Grasa Corporal</title>
 </head>
 <body >
-   <div class="container d-flex  align-items-center">
-       
+   
+    <div class="container d-flex  ">
+        
         <div class = "text-center bg-info softborder p-2 app">
+           
             <form>
             <ul class="list-unstyled p-0 m-0">
                 <li>
                     <label>Sexo</label>
-                    <div class="custom-control custom-switch d-inline ">
-                        <input type="checkbox" class="custom-control-input" id="sexo">
-                        <label class="custom-control-label " for="sexo"></label>
-                    </div>
+                    <select class="custom-select custom-select-sm" name="sexo" id="sexo">
+                        <option value="woman">Mujer</option>
+                        <option value="men">Hombre</option>
+                    </select>
                 </li>
                 <li >
                     <label >Peso</label>
@@ -33,20 +35,20 @@
                     </select>
                 </li>
                 <li>
-                    <label>Cm cintura</label>
+                    <label>Cintura</label>
                     <select  class = "  custom-select custom-select-sm" name="cintura" id="cintura">
         
                     </select>
                 </li>
                 <li class="caderaBox">
-                    <label >Cm Cadera</label>
+                    <label >Cadera</label>
                     <select  class = " custom-select custom-select-sm " name="cadera" id="cadera">
                         
                     </select>
                 </li>
                
                 <li>
-                    <label >Cm cuello</label>
+                    <label >Cuello</label>
                     <input type="range" class="pt-2custom-range w-25" min="25" max="45" id="cuello">
                     <label class = "bg-white" id = "rangevalue" for="cuello">35</label>
                 </li>

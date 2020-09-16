@@ -4,8 +4,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-li {
-  height: 40px;
+.app li {
+  height: 60px;
+}
+.app label {
+    font-size: 25px;
+    width: 100px;
 }
 .container {
   height: 100vh;
@@ -14,7 +18,7 @@ li {
   width: max-content;
 }
 .app {
-  width: 200px;
+  width: 250px;
   height: max-content;
   margin: auto;
   border-radius: 40px;
@@ -25,7 +29,9 @@ li {
 
 .custom-control-label::before{
   background-color:#F78EC4;
+  margin-left: 50px;
 }
 .custom-control-label::after{
+   margin-left: 50px;
   background-color:white !important;
 }

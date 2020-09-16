@@ -31,15 +31,15 @@ const cargarOpciones = (sexo) => {
 let sexoSelector = document.getElementById('sexo');
 let opciones = ['peso', 'altura', 'cadera', 'cintura', 'cuello', 'edad'];
 
-cargarOpciones('woman');
+cargarOpciones(sexoSelector.value);
 
 
 
 sexoSelector.addEventListener('change', () => {
-
-    document.querySelector('.caderaBox').style.display = (sexoSelector.checked) ? 'none' : 'block';
-    let sexo = (sexoSelector.checked) ? 'men' : 'woman';
-    cargarOpciones(sexo);
+ 
+    document.querySelector('.caderaBox').style.display = (sexoSelector.value === 'men') ? 'none' : 'block';
+    
+    cargarOpciones(sexoSelector.value);
 });
 
 document.getElementById('calcular').addEventListener('click', () => {
@@ -56,8 +56,8 @@ document.getElementById('calcular').addEventListener('click', () => {
     opciones.forEach(element => {
          info.push(parseInt(document.getElementById(element).value));
     });
-    let sexo = (sexoSelector.checked) ? 'men' : 'woman';
-    let porcGrasa = calcularGrasa(info,sexo);
+   
+    let porcGrasa = calcularGrasa(info,sexoSelector.value);
     let kgGrasa = info[0] * porcGrasa /100;
     let kgMagro = info[0] - kgGrasa;
     console.log(porcGrasa + '%');

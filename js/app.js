@@ -67,6 +67,6 @@ document.getElementById('calcular').addEventListener('click', () => {
 });
 
 let range = document.getElementById('cuello');
-range.addEventListener('mousemove',() => {
+range.addEventListener('mousemove touchmove',() => {
     document.getElementById('rangevalue').innerText = range.value; 
 })

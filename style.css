@@ -20,7 +20,7 @@ body {
 .app {
   width: 250px;
   height: max-content;
-  margin: auto;
+  margin-top: 14vh;
   border-radius: 40px;
 }
 #rangevalue {

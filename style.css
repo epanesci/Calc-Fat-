@@ -4,34 +4,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.app li {
-  height: 60px;
-}
+
 .app label {
-    font-size: 25px;
-    width: 100px;
+    font-size: 250%;
+    width: 135px;
+    margin: 0px;
+    height: 100%;
 }
 .container {
   height: 100vh;
 }
 .custom-select{
   width: max-content;
+  font-size: 191.7%;
+  vertical-align: top;
 }
 .app {
-  width: 250px;
-  height: max-content;
-  margin-top: 7vh;
+  width: 300px;
+  height: 90vh;
   border-radius: 40px;
 }
 #rangevalue {
-  width: 14%;
-}
-
-.custom-control-label::before{
-  background-color:#F78EC4;
-  margin-left: 50px;
-}
-.custom-control-label::after{
-   margin-left: 50px;
-  background-color:white !important;
+  width: 15%;
 }

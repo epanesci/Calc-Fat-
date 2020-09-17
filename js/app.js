@@ -30,63 +30,60 @@ const initHTML = () => {
 
     }
     document.getElementById('app').innerHTML = `<form>
-        <ul class="list-unstyled p-0 m-0">
-            <li>
+       <div class = "row  m-auto justify-content-center ">
+            <div class = "col-10 p-0 mx-0 my-1">
                 <label>Sexo</label>
-                <select class="custom-select custom-select-sm" name="sexo" id="sexo">
-                    <option value="woman">Mujer</option>
-                    <option value="men">Hombre</option>
+                <select class="custom-select " name="sexo" id="sexo">
+                    <option value="woman">M</option>
+                    <option value="men">H</option>
                 </select>
-            </li>
-            <li >
+            </div>
+            <div class = "col-10 p-0 m-0 my-1">
                 <label >Peso</label>
-                <select class=" custom-select custom-select-sm" name="peso" id="peso">
+                <select class="custom-select " name="peso" id="peso">
 
                 </select>
-            </li>
-            <li>
+            </div>
+            <div class = "col-10 p-0 m-0 my-1">
                 <label>Altura</label>
-                <select class=" custom-select custom-select-sm" name="altura" id="altura">
+                <select class=" custom-select " name="altura" id="altura">
 
                 </select>
-            </li>
-            <li>
+            </div>
+            <div class = "col-10 p-0 m-0 my-1">
                 <label>Cintura</label>
-                <select class="  custom-select custom-select-sm" name="cintura" id="cintura">
+                <select class="  custom-select " name="cintura" id="cintura">
 
                 </select>
-            </li>
-            <li class="caderaBox">
+            </div>
+            <div class = "col-10 p-0 m-0 my-1" id="caderaBox">
                 <label >Cadera</label>
-                <select class=" custom-select custom-select-sm " name="cadera" id="cadera">
+                <select class=" custom-select " name="cadera" id="cadera">
 
                 </select>
-            </li>
+            </div>
 
-            <li>
+            <div class = "col-10 p-0 m-0 my-1">
                 <label >Cuello</label>
                 <input type="range" class="pt-2custom-range w-25" min="25" max="45" id="cuello">
-                    <label class="bg-white" id="rangevalue" for="cuello">35</label>
-                </li>
-                <li>
-                    <label>Edad</label>
-                    <select class=" d-inline custom-select custom-select-sm" name="edad" id="edad">
+                <label class="bg-white" id="rangevalue" for="cuello">35</label>
+            </div>    
+            <div class = "col-10 p-0 m-0 my-1">
+                <label>Edad</label>
+                <select class="custom-select " name="edad" id="edad">
 
-                    </select>
-                </li>
-            </ul>
-            </form>
+                </select>
+            </div>
 
-        <button class="btn btn-outline-dark" id="calcular">Calcular</button>`
+
+        <button class="btn btn-outline-dark mx-auto mt-3" id="calcular">Calcular</button>`
     
   
     let sexoSelector = document.getElementById('sexo');
 
     cargarOpciones(sexoSelector.value);
     sexoSelector.addEventListener('change', () => {
-
-        document.querySelector('.caderaBox').style.display = (sexoSelector.value === 'men') ? 'none' : 'block';
-
+        document.getElementById('caderaBox').style.display = (sexoSelector.value === 'men') ? 'none' : 'block';
         cargarOpciones(sexoSelector.value);
     });
     let range = document.getElementById('cuello');

@@ -21,7 +21,7 @@ body {
 }
 .app {
   width: 300px;
-  height: 90vh;
+  height: max-content;
   border-radius: 40px;
 }
 #rangevalue {

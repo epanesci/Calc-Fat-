@@ -30,7 +30,7 @@ body {
 @media (max-height: 580px) {
   
   .app {
-    margin-top: 3% !important;
+    margin-top: 5% !important;
   }
   .app label {
       font-size: 230%;

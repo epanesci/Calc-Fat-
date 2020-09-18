@@ -26,3 +26,9 @@ body {
 #rangevalue {
   width: 15%;
 }
+
+@media (min-height: 768px) {
+.app {
+  margin: auto;
+}
+}

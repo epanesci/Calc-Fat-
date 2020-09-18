@@ -65,8 +65,8 @@ const initHTML = () => {
 
             <div class = "col-10 p-0 m-0 ">
                 <label >Cuello</label>
-                <input type="range" class="pt-2custom-range w-25" min="25" max="45" id="cuello">
-                <label class="bg-white" id="rangevalue" for="cuello">35</label>
+                <input type="range" class="pt-2 custom-range w-25" min="25" max="45" id="cuello">
+                <label class="bg-white px-1" id="rangevalue" for="cuello">35</label>
             </div>    
             <div class = "col-10 p-0 m-0 ">
                 <label>Edad</label>

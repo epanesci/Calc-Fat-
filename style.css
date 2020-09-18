@@ -19,7 +19,7 @@ body {
   vertical-align: top;
 }
 .app {
-  width: 300px;
+  width: 305px;
   height: max-content;
   border-radius: 40px;
 }
@@ -27,7 +27,7 @@ body {
   width: max-content;
   font-size: 191%;
   height: max-content;
-  margin-left: 3%;
+  margin-left: 2%;
 }
 
 @media (max-height: 580px) {

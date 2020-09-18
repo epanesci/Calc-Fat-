@@ -1,13 +1,8 @@
-body {overflow: hidden; }
-body::-webkit-scrollbar { width: 0 !important; }
-body { overflow: -moz-scrollbars-none; }
-body { -ms-overflow-style: none; }
-* {
-  box-sizing: border-box;
-}
-body {
 
-  
+body {
+  background-image: url("img/fondo.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .app label {
@@ -29,7 +24,10 @@ body {
   border-radius: 40px;
 }
 #rangevalue {
-  width: 15%;
+  width: max-content;
+  font-size: 191%;
+  height: max-content;
+  margin-left: 3%;
 }
 
 @media (max-height: 580px) {

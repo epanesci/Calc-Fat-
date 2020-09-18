@@ -118,10 +118,18 @@ const viewResults = () => {
     let kgMagro = info[0] - kgGrasa;
   
 
-    document.getElementById('app').innerHTML = `  <label>${porcGrasa}%</label> 
-    <label>${kgGrasa}KG</label>
-    <label>${kgMagro}KG</label>
-    <button class="btn btn-outline-dark" id="volver">volver</button>`;
+    document.getElementById('app').innerHTML = `  
+    
+    <div class = "results text-center">
+    <h2>Porcentaje Grasa</h2>
+    <h4 class = "text-center">${porcGrasa} %</h4>
+    <h2>Peso Grasa</h2>
+    <h4 class = "text-center">${kgGrasa} KG</h4>
+    <h2>Peso Magro</h2>
+    <h4 class = "text-center">${kgMagro} KG</h4>
+    <button class="btn btn-outline-dark" id="volver">Volver</button>
+    </div>`;
+    
 
     document.getElementById('volver').addEventListener('click', () => {
         initHTML();

@@ -124,9 +124,9 @@ const viewResults = () => {
     <h2>Porcentaje Grasa</h2>
     <h4 class = "text-center">${porcGrasa} %</h4>
     <h2>Peso Grasa</h2>
-    <h4 class = "text-center">${kgGrasa} KG</h4>
+    <h4 class = "text-center">${Math.trunc(kgGrasa*100)/100} KG</h4>
     <h2>Peso Magro</h2>
-    <h4 class = "text-center">${kgMagro} KG</h4>
+    <h4 class = "text-center">${Math.trunc(kgMagro * 100) / 100} KG</h4>
     <button class="btn btn-outline-dark" id="volver">Volver</button>
     </div>`;
     

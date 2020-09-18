@@ -8,7 +8,7 @@ body {
 .app label {
     font-size: 250%;
     width: 135px;
-    margin: 0px;
+    
     height: 100%;
 }
 .container {
@@ -22,6 +22,7 @@ body {
 .app {
   width: 300px;
   height: max-content;
+  margin-top: 22%;
   border-radius: 40px;
 }
 #rangevalue {

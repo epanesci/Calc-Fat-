@@ -27,10 +27,11 @@ body {
   width: 15%;
 }
 
-@media (max-height: 550px) {
+@media (max-height: 580px) {
   
   .app {
       height: 100px;
+      margin-top: 3px;
   }
 
 }

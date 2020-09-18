@@ -31,44 +31,44 @@ const initHTML = () => {
     }
     document.getElementById('app').innerHTML = `<form>
        <div class = "row  m-auto justify-content-center ">
-            <div class = "col-10 p-0 mx-0 my-1">
+            <div class = "col-10 p-0 m-0 ">
                 <label>Sexo</label>
                 <select class="custom-select " name="sexo" id="sexo">
                     <option value="woman">M</option>
                     <option value="men">H</option>
                 </select>
             </div>
-            <div class = "col-10 p-0 m-0 my-1">
+            <div class = "col-10 p-0 m-0 ">
                 <label >Peso</label>
                 <select class="custom-select " name="peso" id="peso">
 
                 </select>
             </div>
-            <div class = "col-10 p-0 m-0 my-1">
+            <div class = "col-10 p-0 m-0 ">
                 <label>Altura</label>
                 <select class=" custom-select " name="altura" id="altura">
 
                 </select>
             </div>
-            <div class = "col-10 p-0 m-0 my-1">
+            <div class = "col-10 p-0 m-0 ">
                 <label>Cintura</label>
                 <select class="  custom-select " name="cintura" id="cintura">
 
                 </select>
             </div>
-            <div class = "col-10 p-0 m-0 my-1" id="caderaBox">
+            <div class = "col-10 p-0 m-0 " id="caderaBox">
                 <label >Cadera</label>
                 <select class=" custom-select " name="cadera" id="cadera">
 
                 </select>
             </div>
 
-            <div class = "col-10 p-0 m-0 my-1">
+            <div class = "col-10 p-0 m-0 ">
                 <label >Cuello</label>
                 <input type="range" class="pt-2custom-range w-25" min="25" max="45" id="cuello">
                 <label class="bg-white" id="rangevalue" for="cuello">35</label>
             </div>    
-            <div class = "col-10 p-0 m-0 my-1">
+            <div class = "col-10 p-0 m-0 ">
                 <label>Edad</label>
                 <select class="custom-select " name="edad" id="edad">
 

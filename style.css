@@ -1,8 +1,13 @@
-
+::-webkit-scrollbar { width: 0; }
+:root { scrollbar-width: none; }
+* {
+  box-sizing: border-box;
+}
 body {
   background-image: url("img/fondo.jpg") ;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .app label {

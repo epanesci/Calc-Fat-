@@ -29,9 +29,14 @@ body {
 
 @media (max-height: 580px) {
   
-  .app {
+  
+  .app label {
+      font-size: 230%;
      
-      margin-top: 3px;
   }
-
+  .custom-select {
+   
+    font-size: 171.7%;
+    
+}
 }

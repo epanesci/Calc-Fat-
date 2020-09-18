@@ -27,8 +27,10 @@ body {
   width: 15%;
 }
 
-@media (min-height: 768px) {
-.app {
-  margin: auto;
-}
+@media (max-height: 550px) {
+  
+  .app {
+      height: 100px;
+  }
+
 }
